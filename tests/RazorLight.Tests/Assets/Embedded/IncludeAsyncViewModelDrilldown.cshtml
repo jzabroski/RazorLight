@@ -1,0 +1,14 @@
+@using System
+@using System.Linq
+@using RazorLight
+@inherits TemplatePage<RazorLight.Tests.Integrational.BufferTruncationTests.ViewModel>
+
+@{
+	var separator = ": ";
+	var newline = Environment.NewLine;
+	var numbers = Enumerable.Range(1, 1000); //Get numbers from 1 - 10
+	foreach (var number in numbers)
+	{
+		@number @separator @Model.Name @:
+	}
+}

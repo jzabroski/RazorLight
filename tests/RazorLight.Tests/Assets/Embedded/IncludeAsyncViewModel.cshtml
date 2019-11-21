@@ -1,0 +1,4 @@
+@using RazorLight
+@inherits TemplatePage<RazorLight.Tests.Integrational.BufferTruncationTests.ViewModel>
+
+@{ await IncludeAsync("Assets.Embedded.IncludeAsyncViewModelDrilldown.cshtml", Model); }
